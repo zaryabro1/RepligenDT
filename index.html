@@ -1,463 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repligen DT</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style> 
-        .container{
-            display: flex;
-        }
-        .img_dev{
-            display: flex;
-            margin-left: 600px;
-            flex-direction:column;
-        }
-        .sidenav {
-          height: 100%;
-          width: 18%;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #f1f1f1;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-        }
-        .active
-        {
-          background-color: #1111;
-        }
-        .sidenav a {
-          padding: 2px 2px 2px 8px;
-          text-decoration: none;
-          font-size: 18px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        h2
-        {
-          color: #818181;
-          text-decoration: underline;
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        h3
-        {
-          color: #818181;
-          font-family: Arial, Helvetica, sans-serif;
-          padding-left: 10px;
-        }
-        h4
-        {
-          color: #4672C4;
-          font-family: Arial, Helvetica, sans-serif;
-          padding-left: 20px;
-        }
-        .sp{
-          border-top: 5px solid #bbb;
-          border-radius: 5px;
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-        .sidenav a:hover {
-          color: #111;
-          background-color: #1122;
-        }
-        
-        .sidenav .closebtn {
-          position: absolute;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;
-        }
-        
-        
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        </style>
-</head>
-<body>
-    <div id="mySidenav" class="sidenav">
+  <head>
+  	<title>Repligen DT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <a divid="30" href="#">Plant</a> 
-        <a divid="31" href="#">Sales Org</a> 
-        <a divid="33" href="#">Delivering Plant</a> 
-        <a divid="9" href="#" >Acct Assmt Grp Mat</a>
-        <a divid="16" href="#">Item Category Group</a> 
-        <a divid="10" href="#">Purchasing Value Key</a>
-        <a divid="11" href="#">Mfr Part Profile</a>
-        <a divid="12" href="#">Source List</a> 
-        <a divid="13" href="#">ABC Indicator</a> 
-        <a divid="18" href="#">Procurement Type</a>  
-        <a divid="21" href="#">Special Procurement </a> 
-        <a divid="14" href="#">Prod. Stor. LocationEP</a> 
-        <a divid="15" href="#">Planned Delivery Time In Days</a>
-        <a divid="17" href="#">Schedule Margin Key</a> 
-        <a divid="1" href="#">Goods Receipt Processing Time In Days</a>
-        <a divid="2" href="#">Strategy Group</a> 
-        <a divid="3" href="#">QM Material Auth</a> 
-        <a divid="4" href="#">Insp Setup</a> 
-        <a divid="5" href="#">Preferred Inspection Type</a> 
-        <a divid="6" href="#">Active</a> 
-        <a divid="22" href="#">Warehouse Number</a> 
-        <a divid="23" href="#">Party Entitled To Dispose</a> 
-        <a divid="24" href="#">Cycle Counting Indicator</a> 
-        <a divid="19" href="#">Putaway Control Ind</a> 
-        <a divid="20" href="#">Storage Section Ind</a>   
-        <a divid="7" href="#">Stk. Rmvl Ctrl Indicator</a> 
-        <a divid="8" href="#">Sloc</a> 
-        <a divid="32" href="#">Insp Setup, Preferred Inspection Type, Active</a> 
-       
-        <div class="sp"></div>
-        
-        <a divid="25" href="#">CT Material Auth</a>  
-        <a divid="26" href="#">CT Material Type</a>  
-        <a divid="27" href="#">CT Procurement Type</a>  
-        <a divid="28" href="#">CT Extend Billerica</a> 
-       
-        
-    </div>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle "><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight" style="overflow-y: scroll; background-color: #D6C4BF;">
+			<nav id="colorlib-main-menu" role="navigation" >
+				<ul>
+					<li  ><a divid="30" href="#">Plant</a></li>
+					<li > <a divid="31" href="#">Sales Org</a> </li>
+					<li><a divid="33" href="#">Delivering Plant</a> </li>
+					<li><a divid="9" href="#" >Acct Assmt Grp Mat</a></li>
+					<li><a divid="16" href="#">Item Category Group</a> </li>
   
-    <div class="container">
-      
-      <div id="1" class="img_dev" >
-          <h2>Goods Receipt Processing Time In Days</h2>
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img1.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600"> 
-        </div>
-    <br/>
-        <div > 
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg2.JPG" class="img-rounded" alt="Cinque Terre" width="600" height="500"> 
-        </div>
-      </div>
-  
-      <div id="2" class="img_dev">
-        <h2>Strategy Group</h2>
-       
-        <div >
-          <h3>Originating Plant:</h3>
-          <img src="assets/Img2.png" class="img-rounded" alt="Cinque Terre" width="700" height="350"> 
-        </div>
-      </div>
-  
-  
-      <div id="3" class="img_dev">
-          <h2>QM Material Auth</h2>
-          
-        <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img3.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400"> 
-        </div>
-  
-        <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg7.JPG" class="img-rounded" alt="Cinque Terre" width="670" height="400" style="margin-top: 5px;"> 
-        </div>
-  
-     </div>
-  
-  
-        <div id="4" class="img_dev">
-          <h2>Insp setup</h2>
-         
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img4.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
-          </div>
-    
-          <div>
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg4.JPG" class="img-rounded" alt="Cinque Terre" width="500" height="400"> 
-          </div>
-        </div>
-  
-  
-        <div id="5" class="img_dev">
-          <h2>Preferred Inspection Type</h2>
-         
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img5.JPG" class="img-rounded" alt="Cinque Terre" width="300" height="300"> 
-          </div>
-    
-          <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg5.JPG" class="img-rounded" alt="Cinque Terre" width="500" height="300"> 
-          </div>
-        </div>
-  
-  
-        <div id="6" class="img_dev">
-          <h2>Active</h2>
-           
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img6.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
-          </div>
-    
-          <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg6.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
-          </div>
-        </div>
-  
-  
-        <div id="7" class="img_dev">
-          <h2>Stk. Rmvl Ctrl Indicator</h2>
-          
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img7.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400">  
-          </div>
-    
-          
-        </div>
-  
-  
-        <div id="8" class="img_dev">
-          <h2>Sloc</h2>
-          
-          <div >
-            <h3>Originating Plant:</h3>
-            <h4>read table T001L</h4>
-          </div>
-    
-        </div>
-  
-  
-        <div id="9" class="img_dev">
-          <h2>Acct Assmt Grp Mat</h2>        
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img9.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
-          </div>
-        </div>
-  
-  
-        <div id="10" class="img_dev">
-          <h2>Purchasing Value Key</h2>
-          
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img10.JPG" class="img-rounded" alt="Cinque Terre" width="700" height="250">
-          </div>
-        </div>
-  
-  
-        <div id="11" class="img_dev">
-          <h2>Mfr Part Profile</h2>
-          
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img11.png" class="img-rounded" alt="Cinque Terre" width="300" height="300"> 
-          </div>
-    
-        </div>
-  
-  
-        <div id="12" class="img_dev">
-          <h2>Source List</h2>
-  
-              <div >
-                  <h3>Originating Plant:</h3>
-                  <img src="assets/Img12.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="500"> 
-              </div>
-  
-              <div >
-                  <h3>Extend To Billerica:</h3>
-                  <img src="assets/Eimg1.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
-              </div>
-        </div>
-  
-  
-        <div id="13" class="img_dev">
-          <h2>ABC Indicator</h2>
-          
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img13.JPG" class="img-rounded" alt="Cinque Terre" width="300" height="300">
-          </div> 
-        </div>
-  
-  
-        <div id="14" class="img_dev">
-          <h2>Stor. LocationEP</h2>
-         
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img14.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="600">  
-          </div>
-        </div>
-  
-  
-        <div id="15" class="img_dev">
-          <h2>Planned Delivery Time In Days</h2>
-        
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img15.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="500">  
-          </div>
-    
-        </div>
-  
-  
-        <div id="16" class="img_dev">
-          <h2>Item Category Group</h2>
-         
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img16.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="500"> 
-          </div>
-        </div>
-  
-  
-        <div id="17" class="img_dev">
-          <h2>Schedule Margin Key</h2>      
-          <div >
-            <h3>Originating Plant:</h3>
-            <img src="assets/Img17.png" class="img-rounded" alt="Cinque Terre" width="700" height="500">  
-          </div>
-    
-        </div>
-        <div id="18" class="img_dev">
-          <h2>Procurement Type</h2>     
-          <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg8.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="19" class="img_dev">
-          <h2>Putaway Control Ind</h2>      
-          <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg9.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="20" class="img_dev">
-          <h2>Storage Section Ind</h2>      
-          <div >
-            <h3>Extend To Billerica:</h3>
-            <img src="assets/Eimg10.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
-        </div>
-        <h3 style="margin-top: 30px;margin-left: 24%;">Extend To Breda:</h3>
-            <img style="margin-top: 20px;margin-left: 74px;" src="assets/EBimg5.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
-        </div>
-        
-        <div id="21" class="img_dev">
-          <h2>Special Procurement</h2>      
-          <div >
-            <h3>Extend To Breda:</h3>
-            <img src="assets/EBimg1.png" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
-        </div>
-        <div >
-          <h3>Extend To Japan:</h3>
-          <img src="assets/EJimg1.png" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
-      </div>
-        </div>
-        
-        <div id="22" class="img_dev">
-          <h2>Warehouse Number</h2>      
-          <div >
-            <img src="assets/EBimg2.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="23" class="img_dev">
-          <h2>Party Entitled To Dispose</h2>      
-          <div >
-            <img src="assets/EBimg3.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="24" class="img_dev">
-          <h2>Cycle Counting Indicator</h2>   
-          <div >
-            <img src="assets/EBimg4.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
-        </div>
-        </div>
-       
-        <div id="25" class="img_dev">
-          <h2>Consolidated Tree For Material Auth</h2>      
-          <div >
-           
-            <img src="assets/CT_MA.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="26" class="img_dev">
-          <h2>Consolidated Tree For Material Type</h2>      
-          <div >
-            
-            <img src="assets/CT_MT.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="27" class="img_dev">
-          <h2>Consolidated Tree For Procurement Type</h2>      
-          <div >
-           
-            <img src="assets/CT_PT.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600" style="margin-top: 20px;"> 
-        </div>
-        </div>
-        <div id="28" class="img_dev">
-          <h2>Consolidated Tree For Extend Billerica</h2>      
-          <div >
-           
-            <img src="assets/CT_ETB.JPG" class="img-rounded" alt="Cinque Terre" width="600" height="500" style="margin-top: 20px;"> 
-        </div>
-        </div>
-       
-        <div id="30" class="img_dev"> 
-          <h2>Plant</h2>      
-          <div >
-           
-            <img src="assets/Plantimg.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
-        </div>
-        </div> 
-        <div id="31" class="img_dev"> 
-          <h2>Sales Org</h2>      
-          <div >
-           
-            <img src="assets/Salesorgimg.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
-        </div>
-        </div> 
-  
-        <div id="32" class="img_dev"> 
-          <h2>Insp Setup, Preferred Inspection Type, Active</h2>      
-          <div >
-           
-            <img src="assets/InspSetupPreferredInspection TypeActive.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
-        </div>
-        </div> 
-  
-        <div id="33" class="img_dev"> 
-          <h2>Delivering Plant</h2>      
-          <div >
-           
-            <img src="assets/DeliveringPlant.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
-        </div>
-        </div> 
-  </div>
+					<li>    <a divid="10" href="#">Purchasing Value Key</a> </li>
+					<li>    <a divid="11" href="#">Mfr Part Profile</a> </li>
+					<li>    <a divid="12" href="#">Source List</a>  </li>
+					<li>    <a divid="13" href="#">ABC Indicator</a>  </li>
+					<li>    <a divid="18" href="#">Procurement Type</a>   </li>
+					<li>    <a divid="21" href="#">Special Procurement </a>  </li>
+					<li>    <a divid="14" href="#">Prod. Stor. LocationEP</a>  </li>
+					<li>    <a divid="15" href="#">Planned Delivery Time In Days</a> </li>
+					<li>    <a divid="17" href="#">Schedule Margin Key</a>  </li>
+					<li>    <a divid="1" href="#">Goods Receipt Processing Time In Days</a> </li>
+					<li>    <a divid="2" href="#">Strategy Group</a>  </li>
+					<li>    <a divid="3" href="#">QM Material Auth</a>  </li>
+					<li>    <a divid="4" href="#">Insp Setup</a>  </li>
+					<li>    <a divid="5" href="#">Preferred Inspection Type</a>  </li>
+					<li>    <a divid="6" href="#">Active</a>  </li>
+					<li>    <a divid="22" href="#">Warehouse Number</a>  </li>
+					<li>    <a divid="23" href="#">Party Entitled To Dispose</a>  </li>
+					<li>    <a divid="24" href="#">Cycle Counting Indicator</a>  </li>
+					<li>    <a divid="19" href="#">Putaway Control Ind</a>  </li>
+					<li>    <a divid="20" href="#">Storage Section Ind</a>    </li>
+					<li>    <a divid="7" href="#">Stk. Rmvl Ctrl Indicator</a>  </li>
+					<li>    <a divid="8" href="#">Sloc</a>  </li>
+					<li>    <a divid="32" href="#">Insp Setup, Preferred Inspection Type, Active</a>  </li>
+					<li>      <hr/>  </li>
+					<li>      <a divid="25" href="#">CT Material Auth</a>    </li>
+					<li>      <a divid="26" href="#">CT Material Type</a>    </li>
+					<li>      <a divid="27" href="#">CT Procurement Type</a>    </li>
+					<li>      <a divid="28" href="#">CT Extend Billerica</a>   </li>
+				</ul>
+			</nav>
+		</aside> <!-- END COLORLIB-ASIDE -->
+
+		<div id="colorlib-main">
+			<section class="ftco-section pt-4 mb-5 ftco-intro">
+				<div class="container-fluid px-3 px-md-0">
+					<div class="row">
+						
+						<!-- from here -->
+
+						<div id="1" class="img_dev col-md-12 mb-4" >
+							<h2>Goods Receipt Processing Time In Days</h2>
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img1.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600"> 
+						  </div>
+					  <br/>
+						  <div > 
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg2.JPG" class="img-rounded" alt="Cinque Terre" width="600" height="500"> 
+						  </div>
+						</div>
+					
+						<div id="2" class="img_dev col-md-12 mb-4">
+						  <h2>Strategy Group</h2>
+						 
+						  <div >
+							<h3>Originating Plant:</h3>
+							<img src="assets/Img2.png" class="img-rounded" alt="Cinque Terre" width="700" height="350"> 
+						  </div>
+						</div>
+					
+					
+						<div id="3" class="img_dev col-md-12 mb-4">
+							<h2>QM Material Auth</h2>
+							
+						  <div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img3.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400"> 
+						  </div>
+					
+						  <div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg7.JPG" class="img-rounded" alt="Cinque Terre" width="670" height="400" style="margin-top: 5px;"> 
+						  </div>
+					
+					   </div>
+					
+					
+						  <div id="4" class="img_dev col-md-12 mb-4">
+							<h2>Insp setup</h2>
+						   
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img4.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
+							</div>
+					  
+							<div>
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg4.JPG" class="img-rounded" alt="Cinque Terre" width="500" height="400"> 
+							</div>
+						  </div>
+					
+					
+						  <div id="5" class="img_dev col-md-12 mb-4">
+							<h2>Preferred Inspection Type</h2>
+						   
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img5.JPG" class="img-rounded" alt="Cinque Terre" width="300" height="300"> 
+							</div>
+					  
+							<div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg5.JPG" class="img-rounded" alt="Cinque Terre" width="500" height="300"> 
+							</div>
+						  </div>
+					
+					
+						  <div id="6" class="img_dev col-md-12 mb-4">
+							<h2>Active</h2>
+							 
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img6.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
+							</div>
+					  
+							<div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg6.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
+							</div>
+						  </div>
+					
+					
+						  <div id="7" class="img_dev col-md-12 mb-4">
+							<h2>Stk. Rmvl Ctrl Indicator</h2>
+							
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img7.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400">  
+							</div>
+					  
+							
+						  </div>
+					
+					
+						  <div id="8" class="img_dev col-md-12 mb-4">
+							<h2>Sloc</h2>
+							
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <h4>read table T001L</h4>
+							</div>
+					  
+						  </div>
+					
+					
+						  <div id="9" class="img_dev col-md-12 mb-4">
+							<h2>Acct Assmt Grp Mat</h2>        
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img9.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="300"> 
+							</div>
+						  </div>
+					
+					
+						  <div id="10" class="img_dev col-md-12 mb-4">
+							<h2>Purchasing Value Key</h2>
+							
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img10.JPG" class="img-rounded" alt="Cinque Terre" width="700" height="250">
+							</div>
+						  </div>
+					
+					
+						  <div id="11" class="img_dev col-md-12 mb-4">
+							<h2>Mfr Part Profile</h2>
+							
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img11.png" class="img-rounded" alt="Cinque Terre" width="300" height="300"> 
+							</div>
+					  
+						  </div>
+					
+					
+						  <div id="12" class="img_dev col-md-12 mb-4">
+							<h2>Source List</h2>
+					
+								<div >
+									<h3>Originating Plant:</h3>
+									<img src="assets/Img12.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="500"> 
+								</div>
+					
+								<div >
+									<h3>Extend To Billerica:</h3>
+									<img src="assets/Eimg1.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
+								</div>
+						  </div>
+					
+					
+						  <div id="13" class="img_dev col-md-12 mb-4">
+							<h2>ABC Indicator</h2>
+							
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img13.JPG" class="img-rounded" alt="Cinque Terre" width="300" height="300">
+							</div> 
+						  </div>
+					
+					
+						  <div id="14" class="img_dev col-md-12 mb-4">
+							<h2>Stor. LocationEP</h2>
+						   
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img14.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="600">  
+							</div>
+						  </div>
+					
+					
+						  <div id="15" class="img_dev col-md-12 mb-4">
+							<h2>Planned Delivery Time In Days</h2>
+						  
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img15.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="500">  
+							</div>
+					  
+						  </div>
+					
+					
+						  <div id="16" class="img_dev col-md-12 mb-4">
+							<h2>Item Category Group</h2>
+						   
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img16.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="500"> 
+							</div>
+						  </div>
+					
+					
+						  <div id="17" class="img_dev col-md-12 mb-4">
+							<h2>Schedule Margin Key</h2>      
+							<div >
+							  <h3>Originating Plant:</h3>
+							  <img src="assets/Img17.png" class="img-rounded" alt="Cinque Terre" width="700" height="500">  
+							</div>
+					  
+						  </div>
+						  <div id="18" class="img_dev col-md-12 mb-4">
+							<h2>Procurement Type</h2>     
+							<div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg8.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="19" class="img_dev col-md-12 mb-4">
+							<h2>Putaway Control Ind</h2>      
+							<div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg9.JPG" class="img-rounded" alt="Cinque Terre" width="400" height="400" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="20" class="img_dev col-md-12 mb-4">
+							<h2>Storage Section Ind</h2>      
+							<div >
+							  <h3>Extend To Billerica:</h3>
+							  <img src="assets/Eimg10.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
+						  </div>
+						  <h3 style="margin-top: 30px;margin-left: 24%;">Extend To Breda:</h3>
+							  <img style="margin-top: 20px;margin-left: 74px;" src="assets/EBimg5.JPG" class="img-rounded" alt="Cinque Terre" width="200" height="200" style="margin-top: 20px;"> 
+						  </div>
+						  
+						  <div id="21" class="img_dev col-md-12 mb-4">
+							<h2>Special Procurement</h2>      
+							<div >
+							  <h3>Extend To Breda:</h3>
+							  <img src="assets/EBimg1.png" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
+						  </div>
+						  <div >
+							<h3>Extend To Japan:</h3>
+							<img src="assets/EJimg1.png" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
+						</div>
+						  </div>
+						  
+						  <div id="22" class="img_dev col-md-12 mb-4">
+							<h2>Warehouse Number</h2>      
+							<div >
+							  <img src="assets/EBimg2.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="23" class="img_dev col-md-12 mb-4">
+							<h2>Party Entitled To Dispose</h2>      
+							<div >
+							  <img src="assets/EBimg3.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="24" class="img_dev col-md-12 mb-4">
+							<h2>Cycle Counting Indicator</h2>   
+							<div >
+							  <img src="assets/EBimg4.png" class="img-rounded" alt="Cinque Terre" width="700" height="350" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						 
+						  <div id="25" class="img_dev col-md-12 mb-4">
+							<h2>Consolidated Tree For Material Auth</h2>      
+							<div >
+							 
+							  <img src="assets/CT_MA.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="400" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="26" class="img_dev col-md-12 mb-4">
+							<h2>Consolidated Tree For Material Type</h2>      
+							<div >
+							  
+							  <img src="assets/CT_MT.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="27" class="img_dev col-md-12 mb-4">
+							<h2>Consolidated Tree For Procurement Type</h2>      
+							<div >
+							 
+							  <img src="assets/CT_PT.JPG" class="img-rounded" alt="Cinque Terre" width="800" height="600" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						  <div id="28" class="img_dev col-md-12 mb-4">
+							<h2>Consolidated Tree For Extend Billerica</h2>      
+							<div >
+							 
+							  <img src="assets/CT_ETB.JPG" class="img-rounded" alt="Cinque Terre" width="600" height="500" style="margin-top: 20px;"> 
+						  </div>
+						  </div>
+						 
+						  <div id="30" class="img_dev col-md-12 mb-4"> 
+							<h2>Plant</h2>      
+							<div >
+							 
+							  <img src="assets/Plantimg.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
+						  </div>
+						  </div> 
+						  <div id="31" class="img_dev col-md-12 mb-4"> 
+							<h2>Sales Org</h2>      
+							<div >
+							 
+							  <img src="assets/Salesorgimg.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
+						  </div>
+						  </div> 
+					
+						  <div id="32" class="img_dev col-md-12 mb-4"> 
+							<h2>Insp Setup, Preferred Inspection Type, Active</h2>      
+							<div >
+							 
+							  <img src="assets/InspSetupPreferredInspection TypeActive.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
+						  </div>
+						  </div> 
+					
+						  <div id="33" class="img_dev col-md-12 mb-4"> 
+							<h2>Delivering Plant</h2>      
+							<div >
+							 
+							  <img src="assets/DeliveringPlant.png" class="img-rounded" alt="Cinque Terre" width="770" height="500" style="margin-top: 20px;"> 
+						  </div>
+						  </div> 
+
+						<!-- to here -->
+					</div>
+				</div>
+			</section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
-$(document).ready( () =>  {
-  $('.img_dev').hide();
-});
+      $(document).ready( () =>  {
+        $('.img_dev').hide();
+        console.warn("document.ready called");
+      });
+      
+      $("a").click( function() {
+        console.warn("a tag clicked");
+      $('.img_dev').hide();
+      let idx = $(this).attr("divid");
+      console.log(idx);
+      $("#" + idx).show();
+      
+      $(".sidenav a").removeClass("active");
+      $(this).addClass("active");
+      }); 
+        </script>
 
-$("a").click( function() {
-$('.img_dev').hide();
-let idx = $(this).attr("divid");
-console.log(idx);
-$("#" + idx).show();
-
-$(".sidenav a").removeClass("active");
-$(this).addClass("active");
-}); 
-  </script>
-</body>
+	</body>
 </html>
+
